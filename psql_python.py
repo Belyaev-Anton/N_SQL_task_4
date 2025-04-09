@@ -90,6 +90,7 @@ def find_person(conn, insert_person_f_name = None,
 
 
  #_________________________________
+
 with psycopg2.connect(database="netology_d", user="postgres", password="646312") as conn:
     print('1. Функция, создающая структуру БД (таблицы): \n')
     create_db(conn);
@@ -120,3 +121,4 @@ with psycopg2.connect(database="netology_d", user="postgres", password="646312")
                 insert_person_s_name='Булгаков',
                 insert_person_email='NULL',
                 insert_telephone_number = 'xxxxxxxxxx')
+conn.close()
